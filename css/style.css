@@ -124,12 +124,14 @@ header {
 
 .btn__standard {
     padding: 16px 57px;
+    font-size: 0.8125rem;
     border-radius: 23px;
 }
 
 .btn__large {
     padding: 22px 157px;
     background-color: var(--text-blue-color);
+    font-size: 1rem;
     box-shadow: 5px 10px 14px #07ACE629;
     border-radius: 40px;
 }
@@ -482,4 +484,165 @@ header {
 
 .pricing__box--premium .btn {
     --button-color: var(--green-color);
+}
+
+/* form */
+
+.contact {
+    padding: 80px 200px 100px;
+    display: flex;
+}
+  
+.contact__column {
+    width: 50%;
+}
+
+.contact__header {
+    font-size: 3.0625rem;
+    line-height: 3.6875rem;
+    font-family: var(--font-raleway);
+    color: var(--black-color);
+}
+
+.contact__description {
+    margin: 22px 0 42px;
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.contact__details {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--text-light-grey-color);
+}
+
+.details__link {
+    color: var(--text-light-grey-color);
+    font-weight: 500;
+}
+
+.details__link:first-of-type {
+    margin-right: 20px;
+}
+  
+.details__link img {
+    margin-right: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.form__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__field:first-of-type {
+    margin-bottom: 42px;
+}
+
+.form__label {
+    font-size: 0.6875rem;
+    font-weight: bold;
+    line-height: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--text-blue-color);
+    text-transform: uppercase;
+}
+  
+.form__input {
+    line-height: 2.625rem;
+    border: none;
+    border-bottom: 1px solid var(--input-color);
+    background-color: transparent;
+}
+
+.form__agreement {
+    margin-top: 30px;
+  }
+  
+.form__checkbox {
+    margin-bottom: 12px;
+    padding-left: 35px;
+    font-size: 1.375rem;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.form__checkbox input {
+    height: 0;
+    width: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+.form__checkbox .checkbox {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: var(--white-color);
+    border: 1px solid var(--input-color);
+    border-radius: 4px;
+}
+
+.form__checkbox input:checked ~ .checkbox {
+    background-image: url("../assets/Checkmark.svg");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.form__checkbox .agreement__text {
+    margin: 0 10px;
+    font-size: 0.75rem;
+    line-height: 1.0625rem;
+    color: var(--text-chechbox-color);
+}
+
+form .btn {
+    margin-top: 20px;
+    padding: 20px 97px;
+    font-size: 0.8125rem;
+    align-self: flex-end;
+}
+
+.form__button {
+    background-color: var(--blue-color);
+    border-radius: 35px;
+}
+
+/* footer */
+
+.footer {
+    padding: 20px 0;
+    box-shadow: 0 -5px 40px var(--shadow-container-color);
+}
+  
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+  
+.footer__copyright {
+    margin-top: 6px;
+    font-size: 0.6875rem;
+    line-height: 1.5rem;
+    color: var(--text-light-grey-color);
+}
+  
+.footer__icons a:first-of-type {
+    margin-right: 25px;
 }
