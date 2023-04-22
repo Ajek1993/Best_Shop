@@ -1,7 +1,7 @@
 :root {
     --white-color: #ffffff;
     --shadow-container-color: #00000029;
-    --text-color:#000000;
+    --black-color:#000000;
     --text-blue-color: #08A6E4;
     --text-light-grey-color:#A5A5A5;
     --shadow-blue-color:#07ACE629;
@@ -16,9 +16,113 @@
     --shadow-buttons: #FF091129;
     --input-color: #95989A;
     --text-chechbox-color: #707070;
+    --font-raleway: "Raleway", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
 
+body {
+    font-family: var(--font-open-sans);
+}
+  
+a {
+    text-decoration: none;
+}
+  
+.container {
+    width: 1352px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--white-color);
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.logo {
+    font-family: var(--font-raleway);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-blue-color);
+}
+  
+
+.header__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.nav__link {
+    color: var(--text-light-grey-color);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    padding: 28px 18px 22px;
+    border-bottom: 4px solid transparent;
+    letter-spacing: 0.1875rem;
+}
+
+.nav__link:hover {
+    color: var(--black-color);
+    border-color: var(--text-blue-color);
+}
+
+.nav__element {
+    padding: 0 26px;
+}
+
+.nav__element:last-child {
+    padding-right: 0;
+}
+
+.opening__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opening__container {
+    margin-top: 130px;
+    text-align: center;
+}
+
+.opening__header {
+    font-family: var(--font-raleway);
+    font-size: 3.0625rem;
+    color: var(--black-color);
+}
+
+.opening__description {
+    margin-top: 20px;
+    margin-bottom: 38px;
+}
+
+.opening__background-image {
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    color: var(--white-color);
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+}
+
+.btn__large {
+    padding: 22px 157px;
+    background-color: var(--text-blue-color);
+    box-shadow: 5px 10px 14px #07ACE629;
+    border-radius: 40px;
+}
