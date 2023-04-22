@@ -38,6 +38,9 @@ a {
 }
 
 header {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
     height: 70px;
     background-color: var(--white-color);
     box-shadow: 0px 3px 6px #00000029;
@@ -119,6 +122,11 @@ header {
     border: none;
 }
 
+.btn__standard {
+    padding: 16px 57px;
+    border-radius: 23px;
+}
+
 .btn__large {
     padding: 22px 157px;
     background-color: var(--text-blue-color);
@@ -142,6 +150,7 @@ header {
 .pricing__header {
     font-family: var(--font-raleway);
     font-size: 2.25rem;
+    line-height: 2.625rem;
     text-align: center;
     color: var(--black-color);
 }
@@ -231,7 +240,7 @@ header {
     margin: 90px 36px;
 }
 
-.benefits__text:after {
+.benefits__text::after {
     content: "";
     width: 323px;
     height: 4px;
@@ -326,7 +335,7 @@ header {
 }
 
 .benefits__box--trumpet {
-    max-width: 623px;
+    max-width: 620px;
 }
 
 .benefits__box--trumpet .benefits__text {
@@ -357,4 +366,120 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+}
+
+.pricing__boxes {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing__box {
+    width: 370px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--pricing-color)
+}
+
+.pricing__information {
+    margin-top: 34px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.pricing__version {
+    font-family: var(--font-raleway);
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    color: var(--text-pricing-color);
+}
+
+.pricing__cost {
+    margin-top: 25px;
+    font-size: 2.875rem;
+    line-height: 4.375rem;
+    color: var(--pricing-color);
+}
+
+.pricing__limited {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.75rem;
+    font-family: var(--font-raleway);
+    font-weight: 700;
+}
+
+.pricing__items {
+    text-align: center;
+}
+
+.pricing__item {
+    margin-bottom: 20px;
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    color: var(--black-color);
+}
+
+  .pricing__item::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    display: inline-block;
+    background-image: url("../assets/Ckechmark-1.svg");
+}
+  
+.pricing__item--not::before {
+    background-image: url("../assets/Close.svg");
+}
+
+.pricing__box .btn{
+    position: relative;
+    bottom: -25px;
+    font-size: 0.8125rem;
+    background-color: var(--button-color);
+}
+
+.pricing__box--basic {
+    --pricing-color: var(--red-color);
+}
+
+.pricing__box--basic .pricing__cost {
+    margin-bottom: 30px;
+}
+
+.pricing__box--basic .btn {
+    --button-color: var(--red-buttons);
+}
+
+.pricing__box--professional {
+    width: 400px;
+    margin: 0 40px;
+    --pricing-color: var(--text-blue-color);
+    box-shadow: 5px 1px 27px var(--shadow-blue-color);
+}
+
+.pricing__box--professional .pricing__version {
+    font-size: 1.3125rem;
+}
+  
+.pricing__box--professional .pricing__item {
+    margin-bottom: 25px;
+}
+
+.pricing__box--professional .btn{
+    --button-color: var(--blue-color);
+    box-shadow: 5px 10px 14px var(--shadow-blue-color);
+}
+
+.pricing__box--premium {
+    --pricing-color: var(--green-color);
+}
+
+.pricing__box--premium .btn {
+    --button-color: var(--green-color);
+}
