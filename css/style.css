@@ -126,7 +126,7 @@ header {
     border-radius: 40px;
 }
 
-.statistics__section {
+.statistics {
     margin-top: 100px;
 }
 
@@ -138,7 +138,8 @@ header {
     justify-content: space-between;
 }
 
-.statistics__header {
+.statistics__header,
+.pricing__header {
     font-family: var(--font-raleway);
     font-size: 2.25rem;
     text-align: center;
@@ -205,3 +206,155 @@ header {
     color: var(--text-light-grey-color);
     margin-top: 19px;
 }
+
+.benefits {
+    padding: 105px 0;
+    background: var(--footer-background);
+}
+
+.benefits__container {
+    padding: 0 100px;
+}
+
+.benefits__box {
+    margin-bottom: 38px;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-container-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.benefits__text {
+    max-width: 415px;
+    margin: 90px 36px;
+}
+
+.benefits__text:after {
+    content: "";
+    width: 323px;
+    height: 4px;
+    background-color: var(--underline-color);
+    display: block;
+    margin-top: 50px;
+}
+
+.benefits__img {
+    position: relative;
+}
+  
+.benefits__img img {
+    position: relative;
+    z-index: 2;
+}  
+
+.benefits__header {
+    max-width: 75%;
+    margin-bottom: 30px;
+    font-family: var(--font-raleway);
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+    color: var(--black-color);
+}
+
+.benefits__description {
+    line-height: 1.375rem;
+    color: var(--black-color);
+}
+
+.benefits__box--macbook {
+    --underline-color: var(--red-color);
+}
+
+.benefits__box--macbook .benefits__img {
+    margin-right: 117px;
+    margin-bottom: -128px;
+}
+
+.benefits__box--macbook .benefits__img::before {
+    content: "";
+    width: 180px;
+    height: 180px;
+    background-color: var(--underline-color);
+    display: block;
+    border-radius: 40px;
+    position: absolute;
+    right: 0;
+    top: -40px;
+    transform: rotate(45deg);
+}
+
+.benefits__box--macbook .benefits__img img {
+    width: 328px
+}
+
+.benefits__box--iphone {
+    --underline-color: var(--text-blue-color);
+    flex-direction: row-reverse;
+    padding: 0 20px 0 70px;
+}
+
+.benefits__box--iphone .benefits__img::before {
+    content: "";
+    width: 320px;
+    height: 320px;
+    background-color: var(--underline-color);
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -20px;
+}
+  
+.benefits__box--iphone .benefits__img img {
+    width: 426px;
+    height: auto;
+}
+  
+.benefits__box--iphone .benefits__text {
+    margin: 70px 0;
+}
+
+.benefits__box--two-column {
+    --underline-color: var(--green-color);
+    display: flex;
+}
+
+.benefits__box--two-column > div {
+    margin-bottom: 0;
+}
+
+.benefits__box--trumpet {
+    max-width: 623px;
+}
+
+.benefits__box--trumpet .benefits__text {
+    max-width: none;
+    margin: 70px 35px;
+}
+
+.benefits__box--trumpet--img {
+    margin-left: 60px;
+    background-color: var(--underline-color);
+    border: 1px solid var(--border-container-color);
+    border-radius: 5px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+  
+.benefits__box--trumpet--img img {
+    width: 295px;
+    height: auto;
+    margin-top: 55px;
+}
+
+.pricing {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
