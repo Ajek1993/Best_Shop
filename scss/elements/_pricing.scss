@@ -1,0 +1,132 @@
+@import '../settings/variables';
+
+/* pricing section */
+
+.pricing {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__boxes {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__box {
+        width: 370px;
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid var(--pricing-color);
+
+        .btn {
+            position: relative;
+            bottom: -25px;
+            font-size: 0.8125rem;
+            background-color: var(--button-color);
+        }
+
+        &--basic {
+            --pricing-color: #{$red-color};
+
+            .pricing__cost {
+                margin-bottom: 30px;
+            }
+
+            .btn {
+                --button-color: #{$red-buttons};
+            }
+
+        }
+
+        &--professional {
+            width: 400px;
+            margin: 0 40px;
+            --pricing-color: #{$text-blue-color};
+            box-shadow: 5px 1px 27px $shadow-blue-color;
+
+            .pricing__version {
+                font-size: 1.3125rem;
+            }
+
+            .pricing__item {
+                margin-bottom: 25px;
+            }
+
+            .btn{
+                --button-color: #{$blue-color};
+                box-shadow: 5px 10px 14px $shadow-blue-color;
+            }
+        }
+
+        &--premium {
+            --pricing-color: #{$green-color};
+
+            .btn {
+                --button-color: #{$green-color};
+            }
+        }
+    }
+   
+    &__information {
+        margin-top: 34px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    &__version {
+        font-family: $font-raleway;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        font-weight: bold;
+        color: $text-pricing-color;
+    }
+                
+    &__cost {
+        margin-top: 25px;
+        font-size: 2.875rem;
+        line-height: 4.375rem;
+        color: var(--pricing-color);
+    }
+
+    &__limited {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 0.75rem;
+        font-family: $font-raleway;
+        font-weight: 700;
+    }
+    
+    &__items {
+        text-align: center;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        color: $black-color;
+
+        &::before {
+            content: "";
+            width: 11px;
+            height: 11px;
+            margin-right: 10px;
+            display: inline-block;
+            background-image: url("../assets/Ckechmark-1.svg");
+        }
+                      
+        &--not::before {
+            background-image: url("../assets/Close.svg");
+        }
+    }
+}
+
+            
+            
+            

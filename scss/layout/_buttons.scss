@@ -1,0 +1,25 @@
+@import '../settings/variables';
+
+/* buttons */
+
+.btn {
+    color: $white-color;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+}
+
+.btn__standard {
+    padding: 16px 57px;
+    font-size: 0.8125rem;
+    border-radius: 23px;
+}
+
+.btn__large {
+    padding: 22px 157px;
+    background-color: $text-blue-color;
+    font-size: 1rem;
+    box-shadow: 5px 10px 14px #07ACE629;
+    border-radius: 40px;
+}
+

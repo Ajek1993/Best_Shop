@@ -1,0 +1,36 @@
+@import '../settings/variables';
+
+/* opening section */
+
+.opening__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .opening__container {
+        margin-top: 130px;
+        text-align: center;
+
+        .opening__header {
+            font-family: $font-raleway;
+            font-size: 3.0625rem;
+            color: $black-color;
+        }
+        
+        .opening__description {
+            margin-top: 20px;
+            margin-bottom: 38px;
+        }
+    }
+
+    .opening__background-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+
+

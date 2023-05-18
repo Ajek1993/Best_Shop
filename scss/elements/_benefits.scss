@@ -1,0 +1,153 @@
+@import '../settings/variables';
+
+/* benefits section */
+
+.benefits {
+    padding: 105px 0;
+    background: $footer-background;
+
+    &__container {
+        padding: 0 100px;
+    }
+
+    &__box {
+        margin-bottom: 38px;
+        background-color: $white-color;
+        border: 1px solid $border-container-color;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--macbook {
+            --underline-color: #{$red-color};
+
+            .benefits__img {
+                margin-right: 117px;
+                margin-bottom: -128px;
+
+                &::before {
+                    content: "";
+                    width: 180px;
+                    height: 180px;
+                    background-color: var(--underline-color);
+                    display: block;
+                    border-radius: 40px;
+                    position: absolute;
+                    right: 0;
+                    top: -40px;
+                    transform: rotate(45deg);
+                }
+
+                img {
+                    width: 328px
+                }
+                
+            }
+        }
+
+        &--iphone {
+            --underline-color: #{$text-blue-color};
+            flex-direction: row-reverse;
+            padding: 0 20px 0 70px;
+
+            .benefits__img {                  
+                &::before {
+                    content: "";
+                    width: 300px;
+                    height: 300px;
+                    background-color: var(--underline-color);
+                    display: block;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 5px;
+                }
+                img {
+                    width: 426px;
+                    height: auto;
+                }
+            }
+
+            .benefits__text {
+                margin: 70px 0;
+            }
+        }
+
+        &--two-column {
+            --underline-color: #{$green-color};
+            display: flex;
+
+            & > div {
+                margin-bottom: 0;
+            }
+        }
+
+        &--trumpet {
+            max-width: 620px;
+
+            .benefits__text {
+                max-width: none;
+                margin: 70px 35px;
+            }
+
+            &--img {
+                margin-left: 60px;
+                background-color: var(--underline-color);
+                border: 1px solid $border-container-color;
+                border-radius: 5px;
+                display: flex;
+                flex-grow: 1;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 295px;
+                    height: auto;
+                    margin-top: 55px;
+                }
+            }
+        }
+    }
+
+    &__text {
+        max-width: 415px;
+        margin: 90px 36px;
+
+        &::after {
+            content: "";
+            width: 323px;
+            height: 4px;
+            background-color: var(--underline-color);
+            display: block;
+            margin-top: 50px;
+        }
+    }
+
+    &__header {
+        max-width: 75%;
+        margin-bottom: 30px;
+        font-family: $font-raleway;
+        font-size: 2.25rem;
+        line-height: 2.625rem;
+        color: $black-color;
+    }
+                
+    &__description {
+        line-height: 1.375rem;
+        color: $black-color;
+    }
+
+    &__img {
+        position: relative;
+
+        img {
+            position: relative;
+            z-index: 2;
+        }  
+    }
+}
+
+            
+
+            

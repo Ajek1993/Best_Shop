@@ -1,0 +1,81 @@
+@import '../settings/variables';
+
+/* statistics section */
+
+.statistics {
+    margin-top: 100px;
+
+    &__container {
+        width: 100%;
+        max-width: 800px;
+        margin: 100px auto 120px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__box {
+        max-width: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        font-family: $font-raleway;
+
+        .circle {
+            border-radius: 50%;
+            width: 63px;
+            height: 63px;
+            position: relative;
+        }
+
+        &:nth-child(1) {
+            .statistics__circle {
+            background-color: $red-color;
+            }
+
+            .statistics__img {
+                top: 0;
+                left: 45%;
+            }
+        }
+
+        &:nth-child(2) {
+            .statistics__circle {
+            background-color: $blue-color;
+            }
+
+            .statistics__img {
+                top: 14px;
+                left: 47%;
+            }
+        }
+
+        &:nth-child(3) {
+            .statistics__circle {
+            background-color: $green-color;
+            }
+
+            .statistics__img {
+                top: 6px;
+                left: 50%;
+            }                    
+        }
+    }
+
+    &__img {
+        position: absolute;
+    }
+
+    &__number {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: 0.1875rem;
+        margin-top: 13px;
+    }
+        
+    &__description {
+        color: $text-light-grey-color;
+        margin-top: 19px;
+    } 
+} 

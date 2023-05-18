@@ -1,0 +1,24 @@
+@import '../settings/variables';
+
+body {
+    font-family: $font-open-sans;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+.container {
+    width: 1352px;
+    margin: 0 auto;
+}
+
+
+.statistics__header,
+.pricing__header {
+        font-family: $font-raleway;
+        font-size: 2.25rem;
+        line-height: 2.625rem;
+        text-align: center;
+        color: var(--black-color);
+}

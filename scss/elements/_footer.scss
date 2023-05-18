@@ -1,0 +1,31 @@
+@import '../settings/variables';
+
+/* footer section*/
+
+.footer {
+    padding: 20px 0;
+    box-shadow: 0 -5px 40px $shadow-container-color;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }   
+    
+    &__copyright {
+        margin-top: 6px;
+        font-size: 0.6875rem;
+        line-height: 1.5rem;
+        color: $text-light-grey-color;
+    }
+
+    & a:first-of-type {
+        margin-right: 25px;
+    }
+}
