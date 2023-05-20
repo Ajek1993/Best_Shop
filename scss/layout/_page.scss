@@ -1,4 +1,5 @@
 @import '../settings/variables';
+@import '../settings/mixins';
 
 body {
     font-family: $font-open-sans;
@@ -11,6 +12,11 @@ a {
 .container {
     width: 1352px;
     margin: 0 auto;
+
+    @include notebook {
+        width: 100%;
+        padding: 0 15px;
+        }
 }
 
 

@@ -1,4 +1,5 @@
 @import '../settings/variables';
+@import '../settings/mixins';
 
 /* header section */
 
@@ -22,37 +23,108 @@
             font-weight: 300;
             color: $text-blue-color;
         }
+    }
 
-        .header__nav {
-            display: flex;
+    &__nav {
+        display: flex;
+
+        .nav__element {
+            padding: 0 26px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+
+        .nav__link {
+            color: $text-light-grey-color;
+            font-weight: 700;
+            font-size: 0.6875rem;
+            font-family: $font-raleway;
+            text-transform: uppercase;
+            padding: 28px 18px 22px;
+            border-bottom: 4px solid transparent;
+            letter-spacing: 0.1875rem;
+
+            &:hover {
+                color: $black-color;
+                border-color: $text-blue-color;
+            }
+        }
+
+        @include mobile {
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 95px;
+            width: 100%;
+            padding-bottom: 20px;
+            display: none;
+            background-color: $white-color;
 
             .nav__element {
-                padding: 0 26px;
-
-                .nav__link {
-                    color: $text-light-grey-color;
-                    font-weight: 700;
-                    font-size: 0.6875rem;
-                    font-family: $font-raleway;
-                    text-transform: uppercase;
-                    padding: 28px 18px 22px;
-                    border-bottom: 4px solid transparent;
-                    letter-spacing: 0.1875rem;
-
-                    &:hover {
-                        color: $black-color;
-                        border-color: $text-blue-color;
-                    }
-                }
-                
-                &:last-child {
-                    padding-right: 0;
-                }
+                padding: 0;
+            }
+            
+            .nav__link {
+                display: block;
+                padding: 14px 20px;
             }
         }
     }
 }
-  
+
+.menu {
+    &__btn {
+        display: none;
+        position: absolute;
+        top: -100px;
+        left: - 100px;
+
+        @include mobile {
+            &:checked {
+                ~ .header__nav {
+                display: flex;
+                }
+          
+                ~ .menu__toggle {
+                    span {
+                        &:nth-child(1) {
+                            transform: rotate(45deg) translate(2px, 5px);
+                        }
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                        &:nth-child(3) {
+                            transform: rotate(-45deg) translate(2px, -5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__toggle {
+        display: none;
+
+        span {
+            width: 20px;
+            height: 2px;
+            display: block;
+            margin-bottom: 3px;
+            background-color: $text-blue-color;
+            transition: .3s all ease-in-out;
+        
+            &:last-child {
+              margin-bottom: 0;
+            } 
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+}
 
 
 

@@ -1,9 +1,14 @@
 @import '../settings/variables';
+@import '../settings/mixins';
 
 /* statistics section */
 
 .statistics {
     margin-top: 100px;
+
+    @include mobile {
+        margin-top: 50px;
+    }
 
     &__container {
         width: 100%;
@@ -11,6 +16,12 @@
         margin: 100px auto 120px;
         display: flex;
         justify-content: space-between;
+
+        @include mobile {
+            margin: 35px auto 50px;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__box {
@@ -21,6 +32,14 @@
         align-items: center;
         text-align: center;
         font-family: $font-raleway;
+
+        @include mobile {
+            margin-bottom: 35px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
 
         .circle {
             border-radius: 50%;
