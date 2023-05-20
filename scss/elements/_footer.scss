@@ -17,6 +17,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        .logo {
+            font-family: $font-raleway;
+            font-size: 2rem;
+            font-weight: 300;
+            color: $text-blue-color;
+        }
     }   
     
     &__copyright {

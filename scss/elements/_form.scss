@@ -7,6 +7,10 @@
     display: flex;
     flex-direction: column;
 
+    @include tablet {
+        margin-top: 20px;
+      }
+
     &__field {
         display: flex;
         flex-direction: column;
@@ -87,6 +91,6 @@
 
     &__button {
         background-color: $blue-color;
-        border-radius: 35px;
+        border-radius: 35px !important;
     }
 }

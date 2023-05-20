@@ -4,11 +4,20 @@
 /* contact section */
 
 .contact {
-    padding: 80px 200px 100px;
+    padding: 80px 100px 100px;
     display: flex;
+
+    @include tablet {
+        flex-direction: column;
+        padding: 50px 15px;
+    }
 
     &__column {
         width: 50%;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &__header {
@@ -22,6 +31,10 @@
         margin: 22px 0 42px;
         font-size: 1rem;
         line-height: 1.375rem;
+
+        @include tablet {
+            margin: 5px 0 35px;
+        }
     }
 
     &__details {
@@ -29,17 +42,26 @@
         justify-content: flex-start;
         color: $text-light-grey-color;
 
-        &__link {
-            color: $text-light-grey-color;
-            font-weight: 500;
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 
-            &:first-of-type {
-                margin-right: 20px;
-            }
+    .details__link {
+        color: $text-light-grey-color;
+        font-weight: 500;
 
-            img {
-                margin-right: 10px;
-            }
+        @include tablet {
+            margin-bottom: 10px;
+        }
+
+        &:first-of-type {
+            margin-right: 20px;
+        }
+
+        img {
+            margin-right: 10px;
         }
     }
 }
