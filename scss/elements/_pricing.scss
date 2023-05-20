@@ -15,6 +15,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include notebook {
+            width: 100%;
+            flex-direction: column;
+        }
     }
 
     &__box {
@@ -22,8 +27,16 @@
         border-radius: 18px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
         border: 1px solid var(--pricing-color);
+        padding: 25px 10px;
+        padding-bottom: 0;
+
+        @include notebook {
+            flex-direction: row;
+            margin-bottom: 50px !important;
+            flex-wrap: wrap;
+        }
 
         .btn {
             position: relative;
@@ -37,6 +50,10 @@
 
             .pricing__cost {
                 margin-bottom: 30px;
+
+                @include notebook {
+                    margin-bottom: 0;
+                  }
             }
 
             .btn {
@@ -50,6 +67,12 @@
             margin: 0 40px;
             --pricing-color: #{$text-blue-color};
             box-shadow: 5px 1px 27px $shadow-blue-color;
+
+            @include notebook {
+                max-width: 400px;
+                width: 100%;
+                margin: 0 0 50px 0;
+              }
 
             .pricing__version {
                 font-size: 1.3125rem;
@@ -78,6 +101,12 @@
         margin-top: 34px;
         margin-bottom: 60px;
         text-align: center;
+
+        @include notebook {
+            width: 50%;
+            margin: 0;
+            margin-top: 25px;
+        }
     }
 
     &__version {
@@ -105,6 +134,11 @@
     
     &__items {
         text-align: center;
+
+        @include notebook {
+            width: 50%;
+            text-align: left;
+        }
     }
 
     &__item {
@@ -112,6 +146,12 @@
         font-size: 0.875rem;
         line-height: 1.1875rem;
         color: $black-color;
+
+        @include notebook {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
 
         &::before {
             content: "";
