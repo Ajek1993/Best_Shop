@@ -1,18 +1,26 @@
 const calcForm = document.querySelector('.calc__form')
+const inputs = document.querySelectorAll('.calc__form input')
 const choosePackage = document.querySelector(".calc__select")
 const calcSummaryLis = document.querySelectorAll('.calc__summary ul > li')
 const totalPrice = document.querySelector('.summary__total')
 
 const accountingPrice = 35;
 const terminalPrice = 10;
-let finalPrice = 0;
 
-choosePackage.addEventListener('click', showDropmenu)
-calcForm.addEventListener('input', showCalculation)
+choosePackage.addEventListener('click', basketCalculate)
+calcForm.addEventListener('input', basketCalculate)
 
-// ta funkcja rozwija dropdown menu i przy wyborze produktu pokasuje podsumowanie
+// inputs.forEach(function(input) {
+//     input.addEventListener('input', basketCalculate) 
+// })
 
-function showDropmenu (e) {
+
+
+// ta funckcja, powoduję, że po wpisaniu czegoś w inputach, pokazuje się podsumowanie
+
+function basketCalculate (e) {
+    let finalPrice = 0;
+
     e.currentTarget.classList.toggle('open')
 
     if (e.target.tagName === 'LI') {
@@ -42,12 +50,8 @@ function showDropmenu (e) {
             }
         })
     }
-}
 
-// ta funckcja, powoduję, że po wpisaniu czegoś w inputach, pokazuje się podsumowanie
-
-function showCalculation (e) {
-
+    
     if (e.target.checked || e.target.value !== '') {
         console.log(e.target.value)
         calcSummaryLis.forEach(function(li) {
@@ -82,18 +86,80 @@ function showCalculation (e) {
     }
 
     if (e.target.checked === false) {
-        calcSummaryLis.forEach(function(li) {
-            if (e.target['id'] === li.dataset.id && e.target['type'] === 'checkbox') {
-                console.log('checkbox znika')
-                li.classList.remove('open');
+                calcSummaryLis.forEach(function(li) {
+                    if (e.target['id'] === li.dataset.id && e.target['type'] === 'checkbox') {
+                        console.log('checkbox znika')
+                        li.classList.remove('open');
+                    }
+                })
             }
-        })
-    }
 
     totalPrice.classList.add('open')
     totalPrice.lastElementChild.innerText = "$" + finalPrice;
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function showCalculation (e) {
+
+//     if (e.target.checked || e.target.value !== '') {
+//         console.log(e.target.value)
+//         calcSummaryLis.forEach(function(li) {
+//             if (e.target['id'] === li.dataset.id) {
+//                 li.classList.add('open');
+
+//                 switch (e.target['id']) {
+//                     case 'products':
+//                         li.children[1].innerText = `${e.target.value} * $0.50`;
+//                         li.children[2].innerText = '$' + ((e.target.value) * 0.50).toFixed(2);
+//                         finalPrice += (parseFloat((e.target.value) * 0.50));
+//                         break;
+
+//                     case 'orders':
+//                         li.children[1].innerText = `${e.target.value} * $0.80`;
+//                         li.children[2].innerText = '$' + ((e.target.value) * 0.80).toFixed(2);
+//                         finalPrice += (parseFloat((e.target.value) * 0.80))
+//                         break;
+
+//                     case 'accounting':
+//                         li.children[1].innerText = `$${accountingPrice}`;
+//                         finalPrice += accountingPrice
+//                         break;
+                    
+//                     case 'terminal':
+//                         li.children[1].innerText = `$${terminalPrice}`;
+//                         finalPrice += terminalPrice
+//                         break
+//                 }
+//             }
+//         })
+//     }
+
+//     if (e.target.checked === false) {
+//         calcSummaryLis.forEach(function(li) {
+//             if (e.target['id'] === li.dataset.id && e.target['type'] === 'checkbox') {
+//                 console.log('checkbox znika')
+//                 li.classList.remove('open');
+//             }
+//         })
+//     }
+
+//     totalPrice.classList.add('open')
+//     totalPrice.lastElementChild.innerText = "$" + finalPrice;
+
+// }
     // PIERWSZA WERSJA
 
     //     if ((e.target['id']) === 'products') {
@@ -138,4 +204,3 @@ function showCalculation (e) {
     //     })
     // }
 
-}
