@@ -15,8 +15,7 @@ calcForm.addEventListener('input', basketCalculate)
 // })
 
 
-
-// ta funckcja, powoduję, że po wpisaniu czegoś w inputach, pokazuje się podsumowanie
+// ta funkcja, powoduję, że po wpisaniu czegoś w inputach, pokazuje się podsumowanie
 
 function basketCalculate (e) {
     let finalPrice = 0;
@@ -51,9 +50,7 @@ function basketCalculate (e) {
         })
     }
 
-    
     if (e.target.checked || e.target.value !== '') {
-        console.log(e.target.value)
         calcSummaryLis.forEach(function(li) {
             if (e.target['id'] === li.dataset.id) {
                 li.classList.add('open');
@@ -100,17 +97,39 @@ function basketCalculate (e) {
 
 
 
+// DRUGA WERSJA
 
+// function showDropmenu (e) {
+//     e.currentTarget.classList.toggle('open')
 
+//     if (e.target.tagName === 'LI') {
+//         e.currentTarget.firstElementChild.innerText = e.target.innerText;
+//         e.currentTarget.classList.remove('open')
+//         totalPrice.classList.add('open')
 
+//         calcSummaryLis.forEach(function(li) {
+//             if (li.dataset.id === 'package') {
+//                 li.classList.add('open');
+//                 li.children[1].innerText = e.target.innerText;
 
-
-
-
-
-
-
-
+//                 switch (e.target.innerText) {
+//                     case 'Basic':
+//                         li.children[2].innerText = '$0';
+//                         finalPrice += 0;
+//                         break;
+//                     case 'Professional':
+//                         li.children[2].innerText = '$25';
+//                         finalPrice += 25;
+//                         break;
+//                     case 'Premium':
+//                         li.children[2].innerText = '$60';
+//                         finalPrice += 60;
+//                         break;
+//                 }
+//             }
+//         })
+//     }
+// }
 
 // function showCalculation (e) {
 
@@ -160,6 +179,11 @@ function basketCalculate (e) {
 //     totalPrice.lastElementChild.innerText = "$" + finalPrice;
 
 // }
+
+
+
+
+
     // PIERWSZA WERSJA
 
     //     if ((e.target['id']) === 'products') {
