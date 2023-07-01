@@ -84,11 +84,13 @@
         border-radius: 6px;
         border: 1px solid $red-buttons;
         overflow: hidden;
+        animation: dropdownAnimation 0.4s linear;
   
         li {
           font-size: 13px;
           padding: 10px 20px;
           cursor: pointer;
+          animation: liAnimation 0.4s linear;
   
           &:hover {
             background-color: $text-light-grey-color;
@@ -166,6 +168,41 @@
           }
         }
       }
+    }
+  }
+
+
+  
+
+  @keyframes liAnimation{
+    0% {
+      transform: translateY(-25px);
+      height: 10%;
+      opacity: 0.2;
+    }
+
+    50% {
+      height: 50%;
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(0);
+      height: 100%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes dropdownAnimation {
+    0% {
+      height: 10%;
+    }
+
+    50% {
+      height: 50%;
+    }
+
+    100% {
+      height: 200%;
     }
   }
   
